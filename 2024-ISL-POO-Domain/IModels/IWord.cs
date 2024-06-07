@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _2024_ISL_POO_Domain.IModels
 {
-    public interface IWord
+    public interface IWord : IModelBase
     {
         int Id { get; set; }
         string Name { get; set; }

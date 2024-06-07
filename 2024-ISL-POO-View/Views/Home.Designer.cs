@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.panelSelect = new System.Windows.Forms.Panel();
+            this.groupBoxSelectLanguages = new System.Windows.Forms.GroupBox();
+            this.checkBoxSelectStats50pcFail = new System.Windows.Forms.CheckBox();
+            this.checkBoxSelectStats0Tests = new System.Windows.Forms.CheckBox();
+            this.labelSelectStats = new System.Windows.Forms.Label();
+            this.labelSelectGrammaticalGroup = new System.Windows.Forms.Label();
+            this.comboBoxSelectGrammaticalGroup = new System.Windows.Forms.ComboBox();
             this.labelSelectSerie = new System.Windows.Forms.Label();
             this.comboBoxSerie = new System.Windows.Forms.ComboBox();
-            this.groupBoxSelectLanguages = new System.Windows.Forms.GroupBox();
             this.labelSelectLanguage2 = new System.Windows.Forms.Label();
             this.labelSelectLanguage1 = new System.Windows.Forms.Label();
             this.comboBoxLanguage1 = new System.Windows.Forms.ComboBox();
@@ -48,19 +53,14 @@
             this.panelAdd = new System.Windows.Forms.Panel();
             this.groupBoxAddSerie = new System.Windows.Forms.GroupBox();
             this.groupBoxAddWords = new System.Windows.Forms.GroupBox();
-            this.groupBoxAddLanguage = new System.Windows.Forms.GroupBox();
             this.comboBoxGrammaticalGroupAddWord = new System.Windows.Forms.ComboBox();
-            this.labelSelectGrammaticalGroup = new System.Windows.Forms.Label();
-            this.comboBoxSelectGrammaticalGroup = new System.Windows.Forms.ComboBox();
+            this.groupBoxAddLanguage = new System.Windows.Forms.GroupBox();
             this.groupBoxTests = new System.Windows.Forms.GroupBox();
-            this.labelTestNbWords = new System.Windows.Forms.Label();
-            this.numericUpDownTestNbWords = new System.Windows.Forms.NumericUpDown();
             this.buttonTest = new System.Windows.Forms.Button();
+            this.numericUpDownTestNbWords = new System.Windows.Forms.NumericUpDown();
+            this.labelTestNbWords = new System.Windows.Forms.Label();
             this.panelTests = new System.Windows.Forms.Panel();
             this.groupBoxStats = new System.Windows.Forms.GroupBox();
-            this.labelSelectStats = new System.Windows.Forms.Label();
-            this.checkBoxSelectStats0Tests = new System.Windows.Forms.CheckBox();
-            this.checkBoxSelectStats50pcFail = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxWords = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -68,6 +68,7 @@
             this.GrammaticalGroup = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Series = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MatcheList = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelGrammaticalGroup = new System.Windows.Forms.Label();
             this.panelSelect.SuspendLayout();
             this.groupBoxSelectLanguages.SuspendLayout();
             this.panelAdd.SuspendLayout();
@@ -89,23 +90,6 @@
             this.panelSelect.Size = new System.Drawing.Size(765, 90);
             this.panelSelect.TabIndex = 0;
             // 
-            // labelSelectSerie
-            // 
-            this.labelSelectSerie.AutoSize = true;
-            this.labelSelectSerie.Location = new System.Drawing.Point(280, 25);
-            this.labelSelectSerie.Name = "labelSelectSerie";
-            this.labelSelectSerie.Size = new System.Drawing.Size(39, 16);
-            this.labelSelectSerie.TabIndex = 7;
-            this.labelSelectSerie.Text = "Serie";
-            // 
-            // comboBoxSerie
-            // 
-            this.comboBoxSerie.FormattingEnabled = true;
-            this.comboBoxSerie.Location = new System.Drawing.Point(280, 50);
-            this.comboBoxSerie.Name = "comboBoxSerie";
-            this.comboBoxSerie.Size = new System.Drawing.Size(125, 24);
-            this.comboBoxSerie.TabIndex = 6;
-            // 
             // groupBoxSelectLanguages
             // 
             this.groupBoxSelectLanguages.Controls.Add(this.checkBoxSelectStats50pcFail);
@@ -125,6 +109,73 @@
             this.groupBoxSelectLanguages.TabIndex = 16;
             this.groupBoxSelectLanguages.TabStop = false;
             this.groupBoxSelectLanguages.Text = "Filtres";
+            // 
+            // checkBoxSelectStats50pcFail
+            // 
+            this.checkBoxSelectStats50pcFail.AutoSize = true;
+            this.checkBoxSelectStats50pcFail.Location = new System.Drawing.Point(640, 50);
+            this.checkBoxSelectStats50pcFail.Name = "checkBoxSelectStats50pcFail";
+            this.checkBoxSelectStats50pcFail.Size = new System.Drawing.Size(104, 20);
+            this.checkBoxSelectStats50pcFail.TabIndex = 10;
+            this.checkBoxSelectStats50pcFail.Text = ">= 50% Fails";
+            this.checkBoxSelectStats50pcFail.UseVisualStyleBackColor = true;
+            this.checkBoxSelectStats50pcFail.CheckedChanged += new System.EventHandler(this.checkBoxSelectStats50pcFail_CheckedChanged);
+            // 
+            // checkBoxSelectStats0Tests
+            // 
+            this.checkBoxSelectStats0Tests.AutoSize = true;
+            this.checkBoxSelectStats0Tests.Location = new System.Drawing.Point(550, 50);
+            this.checkBoxSelectStats0Tests.Name = "checkBoxSelectStats0Tests";
+            this.checkBoxSelectStats0Tests.Size = new System.Drawing.Size(87, 20);
+            this.checkBoxSelectStats0Tests.TabIndex = 9;
+            this.checkBoxSelectStats0Tests.Text = "No tested";
+            this.checkBoxSelectStats0Tests.UseVisualStyleBackColor = true;
+            this.checkBoxSelectStats0Tests.CheckedChanged += new System.EventHandler(this.checkBoxSelectStats0Tests_CheckedChanged);
+            // 
+            // labelSelectStats
+            // 
+            this.labelSelectStats.AutoSize = true;
+            this.labelSelectStats.Location = new System.Drawing.Point(550, 25);
+            this.labelSelectStats.Name = "labelSelectStats";
+            this.labelSelectStats.Size = new System.Drawing.Size(37, 16);
+            this.labelSelectStats.TabIndex = 8;
+            this.labelSelectStats.Text = "Stats";
+            // 
+            // labelSelectGrammaticalGroup
+            // 
+            this.labelSelectGrammaticalGroup.AutoSize = true;
+            this.labelSelectGrammaticalGroup.Location = new System.Drawing.Point(415, 25);
+            this.labelSelectGrammaticalGroup.Name = "labelSelectGrammaticalGroup";
+            this.labelSelectGrammaticalGroup.Size = new System.Drawing.Size(121, 16);
+            this.labelSelectGrammaticalGroup.TabIndex = 7;
+            this.labelSelectGrammaticalGroup.Text = "Grammatical group";
+            // 
+            // comboBoxSelectGrammaticalGroup
+            // 
+            this.comboBoxSelectGrammaticalGroup.FormattingEnabled = true;
+            this.comboBoxSelectGrammaticalGroup.Location = new System.Drawing.Point(415, 50);
+            this.comboBoxSelectGrammaticalGroup.Name = "comboBoxSelectGrammaticalGroup";
+            this.comboBoxSelectGrammaticalGroup.Size = new System.Drawing.Size(125, 24);
+            this.comboBoxSelectGrammaticalGroup.TabIndex = 6;
+            this.comboBoxSelectGrammaticalGroup.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectGrammaticalGroup_SelectedIndexChanged);
+            // 
+            // labelSelectSerie
+            // 
+            this.labelSelectSerie.AutoSize = true;
+            this.labelSelectSerie.Location = new System.Drawing.Point(280, 25);
+            this.labelSelectSerie.Name = "labelSelectSerie";
+            this.labelSelectSerie.Size = new System.Drawing.Size(39, 16);
+            this.labelSelectSerie.TabIndex = 7;
+            this.labelSelectSerie.Text = "Serie";
+            // 
+            // comboBoxSerie
+            // 
+            this.comboBoxSerie.FormattingEnabled = true;
+            this.comboBoxSerie.Location = new System.Drawing.Point(280, 50);
+            this.comboBoxSerie.Name = "comboBoxSerie";
+            this.comboBoxSerie.Size = new System.Drawing.Size(125, 24);
+            this.comboBoxSerie.TabIndex = 6;
+            this.comboBoxSerie.SelectedIndexChanged += new System.EventHandler(this.comboBoxSerie_SelectedIndexChanged);
             // 
             // labelSelectLanguage2
             // 
@@ -151,6 +202,7 @@
             this.comboBoxLanguage1.Name = "comboBoxLanguage1";
             this.comboBoxLanguage1.Size = new System.Drawing.Size(125, 24);
             this.comboBoxLanguage1.TabIndex = 3;
+            this.comboBoxLanguage1.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage1_SelectedIndexChanged);
             // 
             // comboBoxLanguage2
             // 
@@ -159,6 +211,7 @@
             this.comboBoxLanguage2.Name = "comboBoxLanguage2";
             this.comboBoxLanguage2.Size = new System.Drawing.Size(125, 24);
             this.comboBoxLanguage2.TabIndex = 2;
+            this.comboBoxLanguage2.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage2_SelectedIndexChanged);
             // 
             // buttonAddLanguage
             // 
@@ -168,6 +221,7 @@
             this.buttonAddLanguage.TabIndex = 5;
             this.buttonAddLanguage.Text = "Add language";
             this.buttonAddLanguage.UseVisualStyleBackColor = true;
+            this.buttonAddLanguage.Click += new System.EventHandler(this.buttonAddLanguage_Click);
             // 
             // textBoxAddLanguage
             // 
@@ -191,6 +245,7 @@
             this.buttonAddSerie.TabIndex = 9;
             this.buttonAddSerie.Text = "Add serie";
             this.buttonAddSerie.UseVisualStyleBackColor = true;
+            this.buttonAddSerie.Click += new System.EventHandler(this.buttonAddSerie_Click);
             // 
             // labelLanguage1
             // 
@@ -226,12 +281,13 @@
             // 
             // buttonAddWord
             // 
-            this.buttonAddWord.Location = new System.Drawing.Point(6, 150);
+            this.buttonAddWord.Location = new System.Drawing.Point(6, 175);
             this.buttonAddWord.Name = "buttonAddWord";
             this.buttonAddWord.Size = new System.Drawing.Size(130, 23);
             this.buttonAddWord.TabIndex = 14;
             this.buttonAddWord.Text = "Add word";
             this.buttonAddWord.UseVisualStyleBackColor = true;
+            this.buttonAddWord.Click += new System.EventHandler(this.buttonAddWord_Click);
             // 
             // panelAdd
             // 
@@ -256,6 +312,7 @@
             // 
             // groupBoxAddWords
             // 
+            this.groupBoxAddWords.Controls.Add(this.labelGrammaticalGroup);
             this.groupBoxAddWords.Controls.Add(this.comboBoxGrammaticalGroupAddWord);
             this.groupBoxAddWords.Controls.Add(this.labelLanguage2);
             this.groupBoxAddWords.Controls.Add(this.labelLanguage1);
@@ -264,10 +321,18 @@
             this.groupBoxAddWords.Controls.Add(this.textBoxAddWordLanguage2);
             this.groupBoxAddWords.Location = new System.Drawing.Point(3, 180);
             this.groupBoxAddWords.Name = "groupBoxAddWords";
-            this.groupBoxAddWords.Size = new System.Drawing.Size(140, 180);
+            this.groupBoxAddWords.Size = new System.Drawing.Size(140, 200);
             this.groupBoxAddWords.TabIndex = 16;
             this.groupBoxAddWords.TabStop = false;
             this.groupBoxAddWords.Text = "Add words";
+            // 
+            // comboBoxGrammaticalGroupAddWord
+            // 
+            this.comboBoxGrammaticalGroupAddWord.FormattingEnabled = true;
+            this.comboBoxGrammaticalGroupAddWord.Location = new System.Drawing.Point(6, 150);
+            this.comboBoxGrammaticalGroupAddWord.Name = "comboBoxGrammaticalGroupAddWord";
+            this.comboBoxGrammaticalGroupAddWord.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxGrammaticalGroupAddWord.TabIndex = 15;
             // 
             // groupBoxAddLanguage
             // 
@@ -279,31 +344,6 @@
             this.groupBoxAddLanguage.TabIndex = 15;
             this.groupBoxAddLanguage.TabStop = false;
             this.groupBoxAddLanguage.Text = "Add language";
-            // 
-            // comboBoxGrammaticalGroupAddWord
-            // 
-            this.comboBoxGrammaticalGroupAddWord.FormattingEnabled = true;
-            this.comboBoxGrammaticalGroupAddWord.Location = new System.Drawing.Point(6, 125);
-            this.comboBoxGrammaticalGroupAddWord.Name = "comboBoxGrammaticalGroupAddWord";
-            this.comboBoxGrammaticalGroupAddWord.Size = new System.Drawing.Size(130, 24);
-            this.comboBoxGrammaticalGroupAddWord.TabIndex = 15;
-            // 
-            // labelSelectGrammaticalGroup
-            // 
-            this.labelSelectGrammaticalGroup.AutoSize = true;
-            this.labelSelectGrammaticalGroup.Location = new System.Drawing.Point(415, 25);
-            this.labelSelectGrammaticalGroup.Name = "labelSelectGrammaticalGroup";
-            this.labelSelectGrammaticalGroup.Size = new System.Drawing.Size(121, 16);
-            this.labelSelectGrammaticalGroup.TabIndex = 7;
-            this.labelSelectGrammaticalGroup.Text = "Grammatical group";
-            // 
-            // comboBoxSelectGrammaticalGroup
-            // 
-            this.comboBoxSelectGrammaticalGroup.FormattingEnabled = true;
-            this.comboBoxSelectGrammaticalGroup.Location = new System.Drawing.Point(415, 50);
-            this.comboBoxSelectGrammaticalGroup.Name = "comboBoxSelectGrammaticalGroup";
-            this.comboBoxSelectGrammaticalGroup.Size = new System.Drawing.Size(125, 24);
-            this.comboBoxSelectGrammaticalGroup.TabIndex = 6;
             // 
             // groupBoxTests
             // 
@@ -317,22 +357,6 @@
             this.groupBoxTests.TabStop = false;
             this.groupBoxTests.Text = "Tests";
             // 
-            // labelTestNbWords
-            // 
-            this.labelTestNbWords.AutoSize = true;
-            this.labelTestNbWords.Location = new System.Drawing.Point(6, 25);
-            this.labelTestNbWords.Name = "labelTestNbWords";
-            this.labelTestNbWords.Size = new System.Drawing.Size(115, 16);
-            this.labelTestNbWords.TabIndex = 0;
-            this.labelTestNbWords.Text = "Numbers of words";
-            // 
-            // numericUpDownTestNbWords
-            // 
-            this.numericUpDownTestNbWords.Location = new System.Drawing.Point(6, 50);
-            this.numericUpDownTestNbWords.Name = "numericUpDownTestNbWords";
-            this.numericUpDownTestNbWords.Size = new System.Drawing.Size(130, 22);
-            this.numericUpDownTestNbWords.TabIndex = 1;
-            // 
             // buttonTest
             // 
             this.buttonTest.Location = new System.Drawing.Point(6, 75);
@@ -341,6 +365,23 @@
             this.buttonTest.TabIndex = 2;
             this.buttonTest.Text = "Test";
             this.buttonTest.UseVisualStyleBackColor = true;
+            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            // 
+            // numericUpDownTestNbWords
+            // 
+            this.numericUpDownTestNbWords.Location = new System.Drawing.Point(6, 50);
+            this.numericUpDownTestNbWords.Name = "numericUpDownTestNbWords";
+            this.numericUpDownTestNbWords.Size = new System.Drawing.Size(130, 22);
+            this.numericUpDownTestNbWords.TabIndex = 1;
+            // 
+            // labelTestNbWords
+            // 
+            this.labelTestNbWords.AutoSize = true;
+            this.labelTestNbWords.Location = new System.Drawing.Point(6, 25);
+            this.labelTestNbWords.Name = "labelTestNbWords";
+            this.labelTestNbWords.Size = new System.Drawing.Size(115, 16);
+            this.labelTestNbWords.TabIndex = 0;
+            this.labelTestNbWords.Text = "Numbers of words";
             // 
             // panelTests
             // 
@@ -359,35 +400,6 @@
             this.groupBoxStats.TabIndex = 20;
             this.groupBoxStats.TabStop = false;
             this.groupBoxStats.Text = "Stats";
-            // 
-            // labelSelectStats
-            // 
-            this.labelSelectStats.AutoSize = true;
-            this.labelSelectStats.Location = new System.Drawing.Point(550, 25);
-            this.labelSelectStats.Name = "labelSelectStats";
-            this.labelSelectStats.Size = new System.Drawing.Size(37, 16);
-            this.labelSelectStats.TabIndex = 8;
-            this.labelSelectStats.Text = "Stats";
-            // 
-            // checkBoxSelectStats0Tests
-            // 
-            this.checkBoxSelectStats0Tests.AutoSize = true;
-            this.checkBoxSelectStats0Tests.Location = new System.Drawing.Point(550, 50);
-            this.checkBoxSelectStats0Tests.Name = "checkBoxSelectStats0Tests";
-            this.checkBoxSelectStats0Tests.Size = new System.Drawing.Size(87, 20);
-            this.checkBoxSelectStats0Tests.TabIndex = 9;
-            this.checkBoxSelectStats0Tests.Text = "No tested";
-            this.checkBoxSelectStats0Tests.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSelectStats50pcFail
-            // 
-            this.checkBoxSelectStats50pcFail.AutoSize = true;
-            this.checkBoxSelectStats50pcFail.Location = new System.Drawing.Point(640, 50);
-            this.checkBoxSelectStats50pcFail.Name = "checkBoxSelectStats50pcFail";
-            this.checkBoxSelectStats50pcFail.Size = new System.Drawing.Size(104, 20);
-            this.checkBoxSelectStats50pcFail.TabIndex = 10;
-            this.checkBoxSelectStats50pcFail.Text = ">= 50% Fails";
-            this.checkBoxSelectStats50pcFail.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -436,6 +448,15 @@
             // MatcheList
             // 
             this.MatcheList.Text = "Matches";
+            // 
+            // labelGrammaticalGroup
+            // 
+            this.labelGrammaticalGroup.AutoSize = true;
+            this.labelGrammaticalGroup.Location = new System.Drawing.Point(6, 125);
+            this.labelGrammaticalGroup.Name = "labelGrammaticalGroup";
+            this.labelGrammaticalGroup.Size = new System.Drawing.Size(121, 16);
+            this.labelGrammaticalGroup.TabIndex = 16;
+            this.labelGrammaticalGroup.Text = "Grammatical group";
             // 
             // Home
             // 
@@ -510,6 +531,7 @@
         private System.Windows.Forms.ColumnHeader GrammaticalGroup;
         private System.Windows.Forms.ColumnHeader Series;
         private System.Windows.Forms.ColumnHeader MatcheList;
+        private System.Windows.Forms.Label labelGrammaticalGroup;
     }
 }
 

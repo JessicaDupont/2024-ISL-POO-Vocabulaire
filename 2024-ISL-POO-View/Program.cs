@@ -1,4 +1,7 @@
-﻿using System;
+﻿using _2024_ISL_POO_DAL.Repositories;
+using _2024_ISL_POO_DAL.Repositories.Bases;
+using _2024_ISL_POO_DAL.Repositories.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +17,13 @@ namespace _2024_ISL_POO_View
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            ILanguageRepository languageRepository = new LanguageRepository();
+            IGrammaticalGroupRepository grammaticalRepository = new GrammaticalGroupRepository();
+            IWordRepository wordRepository = new WordRepository();
+
+        Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new Home(languageRepository, grammaticalRepository, wordRepository));
         }
     }
 }

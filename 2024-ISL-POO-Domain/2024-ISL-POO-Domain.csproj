@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="GrammaticalGroups.cs" />
     <Compile Include="IModels\ILanguage.cs" />
+    <Compile Include="IModels\Tools\IModelBase.cs" />
     <Compile Include="IModels\ISerie.cs" />
     <Compile Include="IModels\IWord.cs" />
     <Compile Include="Language.cs" />

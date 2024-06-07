@@ -43,8 +43,31 @@
   <ItemGroup>
     <Compile Include="ADO\Command.cs" />
     <Compile Include="ADO\Connexion.cs" />
+    <Compile Include="Mapping\Tools\CRUD.cs" />
+    <Compile Include="Mapping\Tools\IMapping.cs" />
+    <Compile Include="Mapping\LanguageMapping.cs" />
+    <Compile Include="Mapping\WordMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Bases\RepositoryBase.cs" />
+    <Compile Include="Repositories\Tools\Filtre.cs" />
+    <Compile Include="Repositories\Tools\IRepositoryRead.cs" />
+    <Compile Include="Repositories\Tools\IRepository.cs" />
+    <Compile Include="Repositories\Tools\IRepositoryCreate.cs" />
+    <Compile Include="Repositories\Tools\IRepositoryDelete.cs" />
+    <Compile Include="Repositories\Tools\IRepositorySearch.cs" />
+    <Compile Include="Repositories\Tools\IRepositoryUpdate.cs" />
+    <Compile Include="Repositories\GrammaticalGroupRepository.cs" />
+    <Compile Include="Repositories\Bases\IGrammaticalGroupRepository.cs" />
+    <Compile Include="Repositories\Bases\ILanguageRepository.cs" />
+    <Compile Include="Repositories\Tools\RepositoryBase.cs" />
+    <Compile Include="Repositories\Bases\IWordRepository.cs" />
+    <Compile Include="Repositories\LanguageRepository.cs" />
+    <Compile Include="Repositories\WordRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2024-ISL-POO-Domain\2024-ISL-POO-Domain.csproj">
+      <Project>{96E63E3B-822D-4651-94DB-E2378EBFC98D}</Project>
+      <Name>2024-ISL-POO-Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
