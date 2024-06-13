@@ -43,6 +43,12 @@
   <ItemGroup>
     <Compile Include="ADO\Command.cs" />
     <Compile Include="ADO\Connexion.cs" />
+    <Compile Include="ADO\DB\TLanguages.cs" />
+    <Compile Include="ADO\DB\ITable.cs" />
+    <Compile Include="ADO\DB\TSeries.cs" />
+    <Compile Include="ADO\DB\TSerieWord.cs" />
+    <Compile Include="ADO\DB\TWords.cs" />
+    <Compile Include="ADO\DB\TWordWord.cs" />
     <Compile Include="Mapping\Tools\CRUD.cs" />
     <Compile Include="Mapping\Tools\IMapping.cs" />
     <Compile Include="Mapping\LanguageMapping.cs" />

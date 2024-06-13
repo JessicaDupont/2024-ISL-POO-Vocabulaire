@@ -17,7 +17,7 @@ namespace _2024_ISL_POO_View
     {
         private readonly ILanguageRepository _languageR;
         private readonly IGrammaticalGroupRepository _grammaticalR;
-        private readonly IWordRepository _wordRepository;
+        private readonly IWordRepository _wordR;
         private Filtre _filtres;
 
         public Home(
@@ -29,7 +29,7 @@ namespace _2024_ISL_POO_View
             //repositories
             this._languageR = languageRepository;
             this._grammaticalR = grammaticalRepository;
-            this._wordRepository = wordRepository;
+            this._wordR = wordRepository;
             this._filtres = new Filtre();
 
             //components

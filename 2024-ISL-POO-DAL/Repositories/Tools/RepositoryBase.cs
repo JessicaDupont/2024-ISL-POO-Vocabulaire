@@ -15,10 +15,7 @@ namespace _2024_ISL_POO_DAL.Repositories.Bases
             "Initial Catalog=2024-ISL-POO;" +
             "Integrated Security=True;" +
             "Connect Timeout=30;" +
-            "Encrypt=False;" +
-            "Trust Server Certificate=False;" +
-            "Application Intent=ReadWrite;" +
-            "Multi Subnet Failover=False";
+            "Encrypt=False;";
 
         protected readonly Connexion connect;//Classe créée précédemment dans le dossier ADO
 
