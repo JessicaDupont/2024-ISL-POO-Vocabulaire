@@ -158,7 +158,12 @@ namespace _2024_ISL_POO_View
         private void buttonAddWord_Click(object sender, EventArgs e)
         {
             //TODO add word
-
+            int lg1 = (int)this.comboBoxLanguage1.SelectedValue;
+            string w1 = this.textBoxAddWordLanguage1.Text;
+            int lg2 = (int)this.comboBoxLanguage2.SelectedValue;
+            string w2 = this.textBoxAddWordLanguage2.Text;
+            string gg = this.comboBoxGrammaticalGroupAddWord.Text;
+            _presenterAdds.AddWords(lg1, w1, lg2, w2, gg);
             //reset
             this.comboBoxGrammaticalGroupAddWord.SelectedIndex = -1;
             this.textBoxAddWordLanguage1.Clear();

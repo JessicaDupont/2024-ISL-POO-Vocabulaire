@@ -46,5 +46,12 @@ namespace _2024_ISL_POO_Domain.Models
             Traduction = new List<IWord>();
             Words.Add(this);
         }
+
+        public Word(string name, string grammaticalGroup, int languageId)
+        {
+            this.Name = name;
+            this.Group = new GrammaticalGroup(grammaticalGroup);
+            this.Language = new Language(languageId);
+        }
     }
 }

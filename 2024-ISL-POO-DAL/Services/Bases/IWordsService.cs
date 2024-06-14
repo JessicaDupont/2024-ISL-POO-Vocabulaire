@@ -12,6 +12,9 @@ namespace _2024_ISL_POO_DAL.Services.Bases
     {
         IEnumerable<Filter> MyFilters { get; }
         void AddFilter(Filter filter);
+        IWord AddWord(int lg1, string w1, string gg);
+        void AssociatedWords(IWord one, IWord two);
+
         IEnumerable<IWord> Words { get; set; }
     }
 }

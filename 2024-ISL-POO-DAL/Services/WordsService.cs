@@ -2,6 +2,7 @@
 using _2024_ISL_POO_DAL.Repositories.Interfaces;
 using _2024_ISL_POO_DAL.Services.Bases;
 using _2024_ISL_POO_Domain.IModels;
+using _2024_ISL_POO_Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,20 @@ namespace _2024_ISL_POO_DAL.Services
                 filters.Remove(filter);
             }
             filters.Add(filter);
+        }
+
+        public IWord AddWord(int lg1, string w1, string gg)
+        {
+            //TODO doublon word
+            IWord result = new Word(w1, gg, lg1);
+            result = _wordRepository.Create(result);
+            return result;
+        }
+
+        public void AssociatedWords(IWord one, IWord two)
+        {
+            //TODO associated words
+            throw new NotImplementedException();
         }
     }
 }

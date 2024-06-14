@@ -1,4 +1,6 @@
 # �tapes de cr�ation du projet vocabulaire pour le cours de POO
+## Shéma général
+DB > Repository + Mapping > Service > Presenter > View
 ## View
 ### 1. cr�ation du projet `application Windows Forms (.NET Framework)`
 - nom du projet : `2024-ISL-POO-View`
@@ -199,39 +201,25 @@ Les couches sont :
 3. `DAL` ou `Data Access Layout` : couche d'acc�s aux donn�es
 4. `DB` ou `Database` : couche de stockage des donn�es ADO
 # Mise en place des fonctionnalités
-Liste des fonctionnalités par ordre de priorité
-- [_] obtenir les listes à afficher dans les comboBox de la vue principale
-    - [_] langues
-    - [_] séries
-    - [_] groupe grammatical
-- [_] afficher tous les mots
-    - afficher le nombre de mots sélectionnés
-    - col1 : tous les mots de toutes les langues sont affichés 
-    - col2 : toutes leur correspondance dans toutes les langues
-    - pour chaque correspondance, noter entre `()` le % de réussite
-- [_] appliquer les filtres + combiner les filtres
-    - [_] langue 1
-    - [_] langue 2
-    - [_] langue 1 + langue 2 ==> les mots sans correspondances sont ignorés
-    - [_] groupe grammatical
-    - [_] série
-    - [_] stats (non exclusifs)
-        - [_] no tested
-        - [_] >= 50% Fails
-- [_] test sur X mots aléatoire (filtres min : langue 1 + langue 2)
-    1. lecture mot/correspondance
-    2. liste mots langue 1 + textbox langue 2
-    3. correction
-        - si échecs reprise étape (1) pour les mots en échecs
-        - update du nombre de tests sur le mot/correspondance
-    4. lorsque réussite de tous les mots : afficher les stats du test
-- [_] test sur X mots aléatoire selon les filtres  (filtres min : langue 1 + langue 2)
-    - update du nombre de tests sur le mot/correspondance
-- [_] add mot langue 1 + mot langue 2 + groupe grammatical
-    - si mot langue 1 existe déjà, lié le mot existant
-    - si mot langue 2 existe déjà, lié au mot existant
-    - si la correspondance existe entre les mots déjà existant, ne rien faire
-- [_] add serie (nom)
-
-BONUS
-- [_] add langue
+- [X] liste des langues DB > View
+- [X] liste (+ nombre) des mots DB > View
+    - [X] nombre
+    - [X] traductions
+    - [X] grammatical group doit être correct
+- [X] appliquer les filtres sur la liste de mots
+    - [X] langue 1
+    - [X] langue 2
+    - [X] grammatical group
+- [_] add mot View > DB
+    - [_] gestion des doublons
+- [_] lancer un test sur la liste des mots filtrée
+- [_] créer les stats générales
+    - [_] maj via tests
+    - [_] afficher panel
+    - [_] appliquer les filtres
+- [_] serie
+    - [_] ajouter
+    - [_] ajouter un mot a une série
+    - [_] ajouter des mots à une série
+    - [_] filtrer selon série
+- [_] ajouter langue
