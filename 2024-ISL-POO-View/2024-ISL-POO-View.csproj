@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Lang\EN.cs" />
     <Compile Include="Lang\ILang.cs" />
+    <Compile Include="Presenters\Bases\AddsPanelPresenter.cs" />
+    <Compile Include="Presenters\Bases\FiltersPanelPresenter.cs" />
+    <Compile Include="Presenters\Bases\StatsPanelPresenter.cs" />
+    <Compile Include="Presenters\Bases\TestsPanelPresenter.cs" />
+    <Compile Include="Presenters\Home\HomePresenter.cs" />
+    <Compile Include="Presenters\PresenterBase.cs" />
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,5 +97,6 @@
       <Name>2024-ISL-POO-Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

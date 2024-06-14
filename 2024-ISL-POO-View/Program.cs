@@ -17,13 +17,9 @@ namespace _2024_ISL_POO_View
         [STAThread]
         static void Main()
         {
-            ILanguageRepository languageRepository = new LanguageRepository();
-            IGrammaticalGroupRepository grammaticalRepository = new GrammaticalGroupRepository();
-            IWordRepository wordRepository = new WordRepository();
-
-        Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home(languageRepository, grammaticalRepository, wordRepository));
+            Application.Run(new Home());
         }
     }
 }

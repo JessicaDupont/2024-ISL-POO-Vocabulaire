@@ -41,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GrammaticalGroup.cs" />
-    <Compile Include="IModels\ILanguage.cs" />
-    <Compile Include="IModels\Tools\IModelBase.cs" />
-    <Compile Include="IModels\ISerie.cs" />
-    <Compile Include="IModels\IWord.cs" />
-    <Compile Include="Language.cs" />
-    <Compile Include="Serie.cs" />
-    <Compile Include="Word.cs" />
+    <Compile Include="Models\GrammaticalGroup.cs" />
+    <Compile Include="Models\IModels\ILanguage.cs" />
+    <Compile Include="Models\Tools\IModelBase.cs" />
+    <Compile Include="Models\IModels\ISerie.cs" />
+    <Compile Include="Models\IModels\IWord.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Serie.cs" />
+    <Compile Include="Models\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

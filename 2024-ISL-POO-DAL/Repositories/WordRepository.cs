@@ -66,16 +66,17 @@ namespace _2024_ISL_POO_DAL.Repositories
                         //TODO
                         break;
                     case Filters.serie:
-                        //TODO
+                        //TODO serie
                         break;
                     case Filters.grammaticalGroup:
+                        //TODO
                         result = result.Where(r => r.Group == f.Valeur);
                         break;
                     case Filters.noTested:
-                        //TODO
+                        //TODO stats
                         break;
                     case Filters.fails:
-                        //TODO
+                        //TODO stats
                         break;
                     default:
                         throw new NotImplementedException();

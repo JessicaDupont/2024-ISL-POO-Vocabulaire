@@ -25,7 +25,7 @@ namespace _2024_ISL_POO_Domain.Models
         }
         public List<ISerie> Series() {
             List<ISerie> result = new List<ISerie>();
-            //TODO
+            //TODO series
             return result;
         }
 

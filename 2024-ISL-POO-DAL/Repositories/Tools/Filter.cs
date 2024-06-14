@@ -30,7 +30,7 @@ namespace _2024_ISL_POO_DAL.Repositories.Bases
             if (obj.GetType() == typeof(Filter))
             {
                 Filter f = (Filter)obj;
-                return Champ.Equals(f.Champ) && Valeur.Equals(f.Valeur);
+                return Champ.Equals(f.Champ);
             }
             return base.Equals(obj);
         }

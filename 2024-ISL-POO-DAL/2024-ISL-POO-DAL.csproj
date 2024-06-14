@@ -68,6 +68,13 @@
     <Compile Include="Repositories\Bases\IWordRepository.cs" />
     <Compile Include="Repositories\LanguageRepository.cs" />
     <Compile Include="Repositories\WordRepository.cs" />
+    <Compile Include="Services\Bases\IGrammaticalGroupService.cs" />
+    <Compile Include="Services\Bases\ILanguageService.cs" />
+    <Compile Include="Services\Bases\IWordsService.cs" />
+    <Compile Include="Services\Bases\ServiceBase.cs" />
+    <Compile Include="Services\GrammaticalGroupService.cs" />
+    <Compile Include="Services\LanguagesService.cs" />
+    <Compile Include="Services\WordsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2024-ISL-POO-Domain\2024-ISL-POO-Domain.csproj">
