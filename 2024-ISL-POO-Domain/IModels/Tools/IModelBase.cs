@@ -9,5 +9,6 @@ namespace _2024_ISL_POO_Domain.IModels
     public interface IModelBase
     {
         int Id { get; set; }
+        bool DataCompleted { get; set; }
     }
 }

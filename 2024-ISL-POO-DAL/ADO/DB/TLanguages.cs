@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2024_ISL_POO_DAL.ADO.DB
 {
-    internal class TLanguages : ITable
+    public class TLanguages : ITable
     {
         public string NomTable => "languages";
         public string ChampId => "id";

@@ -8,10 +8,23 @@ namespace _2024_ISL_POO_Domain.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool DataCompleted { get ; set; }
+
+        public Language(int id)
+        {
+            Id = id; ;
+            DataCompleted = false ;
+        }
+        public Language(string name)
+        {
+            Name = name;
+            DataCompleted = false;
+        }
         public Language(int id, string name)
         {
             Id = id; ;
             Name = name;
+            DataCompleted = true;
         }
         public List<IWord> Words() { throw new NotImplementedException(); }
     }

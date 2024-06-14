@@ -8,6 +8,8 @@ namespace _2024_ISL_POO_Domain.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool DataCompleted { get; set; }
+
         public Serie(int id, string name)
         {
             Id = id;

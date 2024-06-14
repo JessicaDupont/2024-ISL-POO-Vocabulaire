@@ -54,7 +54,7 @@
     <Compile Include="Mapping\LanguageMapping.cs" />
     <Compile Include="Mapping\WordMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Tools\Filtre.cs" />
+    <Compile Include="Repositories\Tools\Filter.cs" />
     <Compile Include="Repositories\Tools\IRepositoryRead.cs" />
     <Compile Include="Repositories\Tools\IRepository.cs" />
     <Compile Include="Repositories\Tools\IRepositoryCreate.cs" />

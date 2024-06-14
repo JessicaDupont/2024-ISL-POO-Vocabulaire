@@ -10,7 +10,7 @@ namespace _2024_ISL_POO_DAL.Repositories.Bases
     public interface IRepositorySearch<TModel, Tid>
         where TModel : IModelBase
     {
-        IEnumerable<TModel> Search(Filtre filtre);
-        IEnumerable<TModel> Search(IEnumerable<Filtre> filtres);
+        IEnumerable<TModel> Search(Filter filter);
+        IEnumerable<TModel> Search(IEnumerable<Filter> filters);
     }
 }

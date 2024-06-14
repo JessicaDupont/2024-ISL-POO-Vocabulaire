@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GrammaticalGroups.cs" />
+    <Compile Include="GrammaticalGroup.cs" />
     <Compile Include="IModels\ILanguage.cs" />
     <Compile Include="IModels\Tools\IModelBase.cs" />
     <Compile Include="IModels\ISerie.cs" />

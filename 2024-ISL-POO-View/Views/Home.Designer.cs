@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSelect = new System.Windows.Forms.Panel();
-            this.groupBoxSelectLanguages = new System.Windows.Forms.GroupBox();
+            this.groupBoxFilters = new System.Windows.Forms.GroupBox();
             this.checkBoxSelectStats50pcFail = new System.Windows.Forms.CheckBox();
             this.checkBoxSelectStats0Tests = new System.Windows.Forms.CheckBox();
             this.labelSelectStats = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.panelAdd = new System.Windows.Forms.Panel();
             this.groupBoxAddSerie = new System.Windows.Forms.GroupBox();
             this.groupBoxAddWords = new System.Windows.Forms.GroupBox();
+            this.labelGrammaticalGroup = new System.Windows.Forms.Label();
             this.comboBoxGrammaticalGroupAddWord = new System.Windows.Forms.ComboBox();
             this.groupBoxAddLanguage = new System.Windows.Forms.GroupBox();
             this.groupBoxTests = new System.Windows.Forms.GroupBox();
@@ -63,14 +64,13 @@
             this.groupBoxStats = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxWords = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.Word = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrammaticalGroup = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Series = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MatcheList = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelGrammaticalGroup = new System.Windows.Forms.Label();
+            this.Traduction = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewWords = new System.Windows.Forms.ListView();
             this.panelSelect.SuspendLayout();
-            this.groupBoxSelectLanguages.SuspendLayout();
+            this.groupBoxFilters.SuspendLayout();
             this.panelAdd.SuspendLayout();
             this.groupBoxAddSerie.SuspendLayout();
             this.groupBoxAddWords.SuspendLayout();
@@ -84,31 +84,31 @@
             // 
             // panelSelect
             // 
-            this.panelSelect.Controls.Add(this.groupBoxSelectLanguages);
+            this.panelSelect.Controls.Add(this.groupBoxFilters);
             this.panelSelect.Location = new System.Drawing.Point(150, 3);
             this.panelSelect.Name = "panelSelect";
             this.panelSelect.Size = new System.Drawing.Size(765, 90);
             this.panelSelect.TabIndex = 0;
             // 
-            // groupBoxSelectLanguages
+            // groupBoxFilters
             // 
-            this.groupBoxSelectLanguages.Controls.Add(this.checkBoxSelectStats50pcFail);
-            this.groupBoxSelectLanguages.Controls.Add(this.checkBoxSelectStats0Tests);
-            this.groupBoxSelectLanguages.Controls.Add(this.labelSelectStats);
-            this.groupBoxSelectLanguages.Controls.Add(this.labelSelectGrammaticalGroup);
-            this.groupBoxSelectLanguages.Controls.Add(this.comboBoxSelectGrammaticalGroup);
-            this.groupBoxSelectLanguages.Controls.Add(this.labelSelectSerie);
-            this.groupBoxSelectLanguages.Controls.Add(this.comboBoxSerie);
-            this.groupBoxSelectLanguages.Controls.Add(this.labelSelectLanguage2);
-            this.groupBoxSelectLanguages.Controls.Add(this.labelSelectLanguage1);
-            this.groupBoxSelectLanguages.Controls.Add(this.comboBoxLanguage1);
-            this.groupBoxSelectLanguages.Controls.Add(this.comboBoxLanguage2);
-            this.groupBoxSelectLanguages.Location = new System.Drawing.Point(3, 3);
-            this.groupBoxSelectLanguages.Name = "groupBoxSelectLanguages";
-            this.groupBoxSelectLanguages.Size = new System.Drawing.Size(755, 80);
-            this.groupBoxSelectLanguages.TabIndex = 16;
-            this.groupBoxSelectLanguages.TabStop = false;
-            this.groupBoxSelectLanguages.Text = "Filtres";
+            this.groupBoxFilters.Controls.Add(this.checkBoxSelectStats50pcFail);
+            this.groupBoxFilters.Controls.Add(this.checkBoxSelectStats0Tests);
+            this.groupBoxFilters.Controls.Add(this.labelSelectStats);
+            this.groupBoxFilters.Controls.Add(this.labelSelectGrammaticalGroup);
+            this.groupBoxFilters.Controls.Add(this.comboBoxSelectGrammaticalGroup);
+            this.groupBoxFilters.Controls.Add(this.labelSelectSerie);
+            this.groupBoxFilters.Controls.Add(this.comboBoxSerie);
+            this.groupBoxFilters.Controls.Add(this.labelSelectLanguage2);
+            this.groupBoxFilters.Controls.Add(this.labelSelectLanguage1);
+            this.groupBoxFilters.Controls.Add(this.comboBoxLanguage1);
+            this.groupBoxFilters.Controls.Add(this.comboBoxLanguage2);
+            this.groupBoxFilters.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxFilters.Name = "groupBoxFilters";
+            this.groupBoxFilters.Size = new System.Drawing.Size(755, 80);
+            this.groupBoxFilters.TabIndex = 16;
+            this.groupBoxFilters.TabStop = false;
+            this.groupBoxFilters.Text = "Filtres";
             // 
             // checkBoxSelectStats50pcFail
             // 
@@ -326,6 +326,15 @@
             this.groupBoxAddWords.TabStop = false;
             this.groupBoxAddWords.Text = "Add words";
             // 
+            // labelGrammaticalGroup
+            // 
+            this.labelGrammaticalGroup.AutoSize = true;
+            this.labelGrammaticalGroup.Location = new System.Drawing.Point(6, 125);
+            this.labelGrammaticalGroup.Name = "labelGrammaticalGroup";
+            this.labelGrammaticalGroup.Size = new System.Drawing.Size(121, 16);
+            this.labelGrammaticalGroup.TabIndex = 16;
+            this.labelGrammaticalGroup.Text = "Grammatical group";
+            // 
             // comboBoxGrammaticalGroupAddWord
             // 
             this.comboBoxGrammaticalGroupAddWord.FormattingEnabled = true;
@@ -411,7 +420,7 @@
             // 
             // groupBoxWords
             // 
-            this.groupBoxWords.Controls.Add(this.listView1);
+            this.groupBoxWords.Controls.Add(this.listViewWords);
             this.groupBoxWords.Location = new System.Drawing.Point(3, 3);
             this.groupBoxWords.Name = "groupBoxWords";
             this.groupBoxWords.Size = new System.Drawing.Size(753, 305);
@@ -419,44 +428,40 @@
             this.groupBoxWords.TabStop = false;
             this.groupBoxWords.Text = "=NbWords words";
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Word,
-            this.GrammaticalGroup,
-            this.Series,
-            this.MatcheList});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 25);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(740, 275);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // Word
             // 
             this.Word.Text = "Word";
+            this.Word.Width = 200;
             // 
             // GrammaticalGroup
             // 
             this.GrammaticalGroup.Text = "Grammatical group";
+            this.GrammaticalGroup.Width = 200;
             // 
             // Series
             // 
             this.Series.Text = "Series";
+            this.Series.Width = 140;
             // 
-            // MatcheList
+            // Traduction
             // 
-            this.MatcheList.Text = "Matches";
+            this.Traduction.Text = "WordsTraduction";
+            this.Traduction.Width = 200;
             // 
-            // labelGrammaticalGroup
+            // listViewWords
             // 
-            this.labelGrammaticalGroup.AutoSize = true;
-            this.labelGrammaticalGroup.Location = new System.Drawing.Point(6, 125);
-            this.labelGrammaticalGroup.Name = "labelGrammaticalGroup";
-            this.labelGrammaticalGroup.Size = new System.Drawing.Size(121, 16);
-            this.labelGrammaticalGroup.TabIndex = 16;
-            this.labelGrammaticalGroup.Text = "Grammatical group";
+            this.listViewWords.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Word,
+            this.Traduction,
+            this.GrammaticalGroup,
+            this.Series});
+            this.listViewWords.HideSelection = false;
+            this.listViewWords.Location = new System.Drawing.Point(10, 25);
+            this.listViewWords.Name = "listViewWords";
+            this.listViewWords.Size = new System.Drawing.Size(740, 275);
+            this.listViewWords.TabIndex = 0;
+            this.listViewWords.UseCompatibleStateImageBehavior = false;
+            this.listViewWords.View = System.Windows.Forms.View.Details;
             // 
             // Home
             // 
@@ -470,8 +475,8 @@
             this.Name = "Home";
             this.Text = "Home";
             this.panelSelect.ResumeLayout(false);
-            this.groupBoxSelectLanguages.ResumeLayout(false);
-            this.groupBoxSelectLanguages.PerformLayout();
+            this.groupBoxFilters.ResumeLayout(false);
+            this.groupBoxFilters.PerformLayout();
             this.panelAdd.ResumeLayout(false);
             this.groupBoxAddSerie.ResumeLayout(false);
             this.groupBoxAddSerie.PerformLayout();
@@ -511,7 +516,7 @@
         private System.Windows.Forms.GroupBox groupBoxAddSerie;
         private System.Windows.Forms.GroupBox groupBoxAddWords;
         private System.Windows.Forms.GroupBox groupBoxAddLanguage;
-        private System.Windows.Forms.GroupBox groupBoxSelectLanguages;
+        private System.Windows.Forms.GroupBox groupBoxFilters;
         private System.Windows.Forms.Label labelSelectGrammaticalGroup;
         private System.Windows.Forms.ComboBox comboBoxSelectGrammaticalGroup;
         private System.Windows.Forms.ComboBox comboBoxGrammaticalGroupAddWord;
@@ -526,12 +531,12 @@
         private System.Windows.Forms.CheckBox checkBoxSelectStats50pcFail;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBoxWords;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label labelGrammaticalGroup;
+        private System.Windows.Forms.ListView listViewWords;
         private System.Windows.Forms.ColumnHeader Word;
         private System.Windows.Forms.ColumnHeader GrammaticalGroup;
         private System.Windows.Forms.ColumnHeader Series;
-        private System.Windows.Forms.ColumnHeader MatcheList;
-        private System.Windows.Forms.Label labelGrammaticalGroup;
+        private System.Windows.Forms.ColumnHeader Traduction;
     }
 }
 

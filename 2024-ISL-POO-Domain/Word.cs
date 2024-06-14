@@ -11,15 +11,29 @@ namespace _2024_ISL_POO_Domain.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public GrammaticalGroups Group  { get; set; }
+        public GrammaticalGroup Group  { get; set; }
         public ILanguage Language { get; set; }
-        public Word(int id, string name, GrammaticalGroups group, ILanguage language)
+        public bool DataCompleted { get; set; }
+
+        public Word(int id, string name, string group, ILanguage language)
         {
             Id = id;
             Name = name;
-            Group = group;
+            Group = new GrammaticalGroup(group);
             Language = language;
+            DataCompleted = true;
         }
-        public List<ISerie> Series() { throw new NotImplementedException(); }
+        public List<ISerie> Series() {
+            List<ISerie> result = new List<ISerie>();
+            //TODO
+            return result;
+        }
+
+        public List<IWord> Traduction()
+        {
+            List<IWord> result = new List<IWord>();
+            //TODO
+            return result;
+        }
     }
 }
