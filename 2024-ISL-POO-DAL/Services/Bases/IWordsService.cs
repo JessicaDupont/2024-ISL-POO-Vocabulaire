@@ -10,7 +10,7 @@ namespace _2024_ISL_POO_DAL.Services.Bases
 {
     public interface IWordsService
     {
-        IEnumerable<Filter> Filters { get; }
+        IEnumerable<Filter> MyFilters { get; }
         void AddFilter(Filter filter);
         IEnumerable<IWord> Words { get; set; }
     }

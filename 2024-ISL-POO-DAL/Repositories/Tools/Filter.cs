@@ -13,7 +13,8 @@ namespace _2024_ISL_POO_DAL.Repositories.Bases
         serie,
         grammaticalGroup,
         noTested,
-        fails
+        fails,
+        word
     }
     public class Filter
     {

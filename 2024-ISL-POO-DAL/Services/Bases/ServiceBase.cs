@@ -11,14 +11,14 @@ namespace _2024_ISL_POO_DAL.Services.Bases
 {
     public abstract class ServiceBase
     {
-        protected ILanguageRepository LanguageRepository;
-        protected IWordRepository WordRepository;
-        protected IGrammaticalGroupRepository GrammaticalGroupRepository;
+        protected ILanguageRepository _languageRepository;
+        protected IWordRepository _wordRepository;
+        protected IGrammaticalGroupRepository _grammaticalGroupRepository;
         protected ServiceBase()
         {
-            LanguageRepository = new LanguageRepository();
-            WordRepository = new WordRepository();
-            GrammaticalGroupRepository = new GrammaticalGroupRepository();
+            _languageRepository = new LanguageRepository();
+            _wordRepository = new WordRepository();
+            _grammaticalGroupRepository = new GrammaticalGroupRepository();
         }
     }
 }

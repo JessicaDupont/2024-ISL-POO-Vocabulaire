@@ -16,7 +16,7 @@ namespace _2024_ISL_POO_DAL.Services
         }
         public IEnumerable<ILanguage> Languages 
         {
-            get => LanguageRepository.Read();
+            get => _languageRepository.Read();
             set
             {
                 throw new NotImplementedException(); //TODO add language

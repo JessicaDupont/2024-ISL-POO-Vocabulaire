@@ -14,6 +14,6 @@ namespace _2024_ISL_POO_DAL.Services
             
         }
 
-        public IEnumerable<string> Groups => GrammaticalGroupRepository.Read();
+        public IEnumerable<string> Groups => _grammaticalGroupRepository.Read();
     }
 }

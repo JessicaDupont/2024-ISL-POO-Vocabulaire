@@ -30,14 +30,14 @@ namespace _2024_ISL_POO_View.Presenters.Home
                 {
                     ListViewItem newWord = new ListViewItem(word.Name);
                     string temp = "";
-                    foreach (IWord trad in word.Traduction())
+                    foreach (IWord trad in word.Traduction)
                     {
                         temp += trad.Name + ", ";
                     }
                     newWord.SubItems.Add(temp);
                     newWord.SubItems.Add(word.Group.Name);
                     temp = "";
-                    foreach (ISerie serie in word.Series())
+                    foreach (ISerie serie in word.Series)
                     {
                         temp += serie.Name + ", ";
                     }

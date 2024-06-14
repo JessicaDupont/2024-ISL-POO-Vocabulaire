@@ -13,7 +13,7 @@ namespace _2024_ISL_POO_Domain.IModels
         string Name { get; set; }
         GrammaticalGroup Group { get; set; }
         ILanguage Language { get; set; }
-        List<ISerie> Series();
-        List<IWord> Traduction();
+        List<ISerie> Series { get; set; }
+        List<IWord> Traduction { get; set; }
     }
 }

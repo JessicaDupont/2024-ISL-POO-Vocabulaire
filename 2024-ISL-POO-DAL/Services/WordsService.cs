@@ -19,10 +19,10 @@ namespace _2024_ISL_POO_DAL.Services
             filters = new List<Filter>();
         }
 
-        public IEnumerable<Filter> Filters => filters;
+        public IEnumerable<Filter> MyFilters => filters;
         public IEnumerable<IWord> Words 
-        { 
-            get => WordRepository.Search(filters);
+        {
+            get => _wordRepository.Search(filters).ToList();
             set 
             {
                 //TODO add words

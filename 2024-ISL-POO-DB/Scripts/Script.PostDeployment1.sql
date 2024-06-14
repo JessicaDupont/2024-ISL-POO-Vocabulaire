@@ -25,7 +25,7 @@ insert into words(name, grammatical_group, id_language) values
 insert into word_word values
     (1,2),
     (3,4),
-    (4,6);
+    (5,6);
 
 insert into series(name) values('politesse');
 insert into serie_word(id_serie, id_word) values
