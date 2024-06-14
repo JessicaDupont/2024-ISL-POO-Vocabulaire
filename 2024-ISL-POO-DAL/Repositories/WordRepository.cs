@@ -4,6 +4,7 @@ using _2024_ISL_POO_DAL.Mapping.Bases;
 using _2024_ISL_POO_DAL.Repositories.Bases;
 using _2024_ISL_POO_DAL.Repositories.Interfaces;
 using _2024_ISL_POO_Domain.IModels;
+using _2024_ISL_POO_Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,14 +64,16 @@ namespace _2024_ISL_POO_DAL.Repositories
                         result = result.Where(r => r.Language.Id == (int)f.Valeur);
                         break;
                     case Filters.language2:
-                        //TODO
+                        result = result.Where(r => r.Traduction.Exists(t => t.Language.Id == (int)f.Valeur));
                         break;
                     case Filters.serie:
                         //TODO serie
                         break;
                     case Filters.grammaticalGroup:
-                        //TODO
-                        result = result.Where(r => r.Group == f.Valeur);
+                        if (!GrammaticalGroups.ALL.ToString().Equals(f.Valeur))
+                        {
+                            result = result.Where(r => r.Group.Compare((string)f.Valeur));
+                        }
                         break;
                     case Filters.noTested:
                         //TODO stats

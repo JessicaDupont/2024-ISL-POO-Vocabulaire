@@ -13,6 +13,7 @@ namespace _2024_ISL_POO_DAL.Repositories
         public IEnumerable<string> Read()
         {
             IList<string> result = new List<string>();
+            result.Add(GrammaticalGroups.ALL.ToString());
             result.Add(GrammaticalGroups.adjective.ToString());
             result.Add(GrammaticalGroups.adverb.ToString());
             result.Add(GrammaticalGroups.auxiliary.ToString());

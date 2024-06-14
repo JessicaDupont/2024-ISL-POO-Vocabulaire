@@ -16,12 +16,12 @@ insert into languages(id, name) values
 set identity_insert languages off;
 
 insert into words(name, grammatical_group, id_language) values
-    ('bonjour', 'nom' ,1),
-    ('hello', 'nom', 2),
-    ('merci', 'nom', 1),
-    ('thank you', 'nom', 2),
-    ('au revoir', 'nom', 1),
-    ('bye', 'nom', 2);
+    ('bonjour', 'name' ,1),
+    ('hello', 'name', 2),
+    ('merci', 'name', 1),
+    ('thank you', 'name', 2),
+    ('au revoir', 'name', 1),
+    ('bye', 'name', 2);
 insert into word_word values
     (1,2),
     (3,4),

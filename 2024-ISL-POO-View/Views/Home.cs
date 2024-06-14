@@ -54,13 +54,11 @@ namespace _2024_ISL_POO_View
             _presenterFilters.AddFilter(new Filter(Filters.language2, this.comboBoxLanguage2.SelectedValue));
             //serie
             this.labelSelectSerie.Text = _presenterFilters.SerieTitle;
-            this.comboBoxSerie.Text = "-"; //TODO serie
+            //TODO serie
             //_wordsS.Filters..Add(new Filter(Filters.serie, this.comboBoxSerie.SelectedValue));
             //grammatical group
             this.labelSelectGrammaticalGroup.Text = _presenterFilters.GrammaticalGroupTitle;
             this.comboBoxSelectGrammaticalGroup.DataSource = _presenterFilters.GrammaticalGroupList;
-            this.comboBoxSelectGrammaticalGroup.SelectedIndex = -1;
-            //_wordsS.Filters..Add(new Filter(Filters.grammaticalGroup, this.comboBoxSelectGrammaticalGroup.SelectedValue));
             //tested
             this.labelSelectStats.Text = _presenterFilters.TestedTitle;
             this.checkBoxSelectStats0Tests.Checked = true;
@@ -103,34 +101,41 @@ namespace _2024_ISL_POO_View
         {
             this.comboBoxLanguage1.Text = comboBoxLanguage1.Text;
             this.labelLanguage1.Text = this.comboBoxLanguage1.Text;
-            //TODO appliquer filtre sur ensemble des résultats
+            _presenterFilters.AddFilter(new Filter(Filters.language1, this.comboBoxLanguage1.SelectedValue));
+            this.listViewWords.Items.Clear();
+            this.listViewWords.Items.AddRange(_homePresenter.ListViewWords);
         }
 
         private void comboBoxLanguage2_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.comboBoxLanguage2.Text = comboBoxLanguage2.Text;
             this.labelLanguage2.Text = this.comboBoxLanguage2.Text;
-            //TODO appliquer filtre sur ensemble des résultats
+            _presenterFilters.AddFilter(new Filter(Filters.language2, this.comboBoxLanguage2.SelectedValue));
+            this.listViewWords.Items.Clear();
+            this.listViewWords.Items.AddRange(_homePresenter.ListViewWords);
         }
 
         private void comboBoxSerie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TODO appliquer filtre sur ensemble des résultats
+            //TODO serie
         }
 
         private void comboBoxSelectGrammaticalGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TODO appliquer filtre sur ensemble des résultats
+            this.comboBoxSelectGrammaticalGroup.Text = comboBoxSelectGrammaticalGroup.Text;
+            _presenterFilters.AddFilter(new Filter(Filters.grammaticalGroup, this.comboBoxSelectGrammaticalGroup.Text));
+            this.listViewWords.Items.Clear();
+            this.listViewWords.Items.AddRange(_homePresenter.ListViewWords);
         }
 
         private void checkBoxSelectStats0Tests_CheckedChanged(object sender, EventArgs e)
         {
-            //TODO appliquer filtre sur ensemble des résultats
+            //TODO stats
         }
 
         private void checkBoxSelectStats50pcFail_CheckedChanged(object sender, EventArgs e)
         {
-            //TODO appliquer filtre sur ensemble des résultats
+            //TODO stats
         }
 
         //panel TESTS
@@ -153,6 +158,11 @@ namespace _2024_ISL_POO_View
         private void buttonAddWord_Click(object sender, EventArgs e)
         {
             //TODO add word
+
+            //reset
+            this.comboBoxGrammaticalGroupAddWord.SelectedIndex = -1;
+            this.textBoxAddWordLanguage1.Clear();
+            this.textBoxAddWordLanguage2.Clear();
         }
     }
 }
