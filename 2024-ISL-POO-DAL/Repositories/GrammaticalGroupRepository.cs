@@ -13,18 +13,18 @@ namespace _2024_ISL_POO_DAL.Repositories
         public IEnumerable<string> Read()
         {
             IList<string> result = new List<string>();
-            result.Add(GrammaticalGroups.Adjective.ToString());
-            result.Add(GrammaticalGroups.Adverb.ToString());
-            result.Add(GrammaticalGroups.Auxiliary.ToString());
-            result.Add(GrammaticalGroups.Article.ToString());
-            result.Add(GrammaticalGroups.Conjunction.ToString());
-            result.Add(GrammaticalGroups.Interjection.ToString());
-            result.Add(GrammaticalGroups.Name.ToString());
-            result.Add(GrammaticalGroups.Number.ToString());
-            result.Add(GrammaticalGroups.Preposition.ToString());
-            result.Add(GrammaticalGroups.Pronoun.ToString());
-            result.Add(GrammaticalGroups.Symbol.ToString());
-            result.Add(GrammaticalGroups.Verb.ToString());
+            result.Add(GrammaticalGroups.adjective.ToString());
+            result.Add(GrammaticalGroups.adverb.ToString());
+            result.Add(GrammaticalGroups.auxiliary.ToString());
+            result.Add(GrammaticalGroups.article.ToString());
+            result.Add(GrammaticalGroups.conjunction.ToString());
+            result.Add(GrammaticalGroups.interjection.ToString());
+            result.Add(GrammaticalGroups.name.ToString());
+            result.Add(GrammaticalGroups.number.ToString());
+            result.Add(GrammaticalGroups.preposition.ToString());
+            result.Add(GrammaticalGroups.pronoun.ToString());
+            result.Add(GrammaticalGroups.symbol.ToString());
+            result.Add(GrammaticalGroups.verb.ToString());
             return result;
         }
 
